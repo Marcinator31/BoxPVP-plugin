@@ -1,0 +1,53 @@
+# ============================================================
+#  BoxPvP - Configuration
+#  Everything here is adjustable. /boxpvp reload re-reads it.
+# ============================================================
+
+# Item used as the selection "wand".
+wand-item: BLAZE_ROD
+
+# Default reset interval in seconds, used when a zone is created
+# without its own interval. (e.g. 300 = every 5 minutes)
+default-reset-interval: 300
+
+# How many seconds before a reset the chat warning is sent.
+warning-seconds: 10
+
+# Whether dropped items inside a zone are cleared on reset.
+clear-items-on-reset: true
+
+# Block types removed (set to AIR) on reset.
+# Bukkit Material names. Example for typical BoxPvP: only placed
+# soft blocks get removed.
+blocks-to-remove:
+  - COBBLESTONE
+  - DIRT
+  - SAND
+  - GRAVEL
+  - OAK_PLANKS
+  - NETHERRACK
+  - END_STONE
+  - OBSIDIAN
+
+# Messages. {seconds}, {zone}, {x}, {y}, {z}, {interval} are replaced.
+# & = color codes.
+messages:
+  prefix: "&8[&cBoxPvP&8] "
+  warning: "&eBox &c{zone} &ewill reset in &c{seconds}s&e!"
+  reset-done: "&aBox &2{zone} &ahas been reset."
+  blocks-reset: "&aBlocks in zone &2{zone} &ahave been reset."
+  items-reset: "&aItems in zone &2{zone} &ahave been cleared."
+  wand-given: "&aYou received the BoxPvP wand. Left-click = Pos1, Right-click = Pos2."
+  pos1-set: "&aPos1 set: &7{x}, {y}, {z}"
+  pos2-set: "&aPos2 set: &7{x}, {y}, {z}"
+  no-selection: "&cYou must set both points (Pos1 & Pos2) first."
+  zone-created: "&aZone &2{zone} &acreated (interval: {interval}s)."
+  zone-exists: "&cA zone with that name already exists."
+  zone-deleted: "&aZone &2{zone} &adeleted."
+  zone-not-found: "&cZone &7{zone} &cnot found."
+  reloaded: "&aConfig & zones reloaded."
+  no-permission: "&cYou don't have permission."
+  players-only: "&cOnly players can do that."
+
+# Zones are stored here (no need to edit by hand).
+zones: {}

@@ -1,0 +1,15 @@
+name: BoxPvP
+version: 1.0.0
+main: me.boxpvp.boxpvp.BoxPvP
+api-version: '1.21'
+author: you
+description: BoxPvP arena reset plugin with wand & command selection.
+commands:
+  boxpvp:
+    description: Manage BoxPvP zones.
+    usage: /boxpvp <wand|create|delete|list|pos1|pos2|reset|resetblocks|resetitems|reload|info>
+    aliases: [box, bpvp]
+permissions:
+  boxpvp.admin:
+    description: Allows managing BoxPvP zones.
+    default: op
